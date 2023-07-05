@@ -13,11 +13,11 @@ public class phuong_trinh_bac_nhat {
         double b = scanner.nextDouble();
         System.out.print("c: ");//nhập từng phần tử
         double c = scanner.nextDouble();
-        if (a!=0){
-            double answer = (c-b)/a;
+        if (a != 0) {
+            double answer = (c - b) / a;
             System.out.printf("Equation pass with x = %f!\n", answer);
         } else {
-            if (b == c){
+            if (b == c) {
                 System.out.print("The solution is all x!");
             } else {
                 System.out.print("No solution!");
