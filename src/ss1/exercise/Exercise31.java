@@ -6,125 +6,125 @@ public class Exercise31 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập cân nặng của bạn: ");
-        int weight = scanner.nextInt();
-        if (weight < 0 || weight > 999) {
+        int number = scanner.nextInt();
+        if (number < 0 || number > 999) {
             System.out.printf("Cân nặng không chính xác");
-        } else if (weight == 0) {
+        } else if (number == 0) {
             System.out.println("zero");
-        } else if (weight < 10) {
-            System.out.println(so1_9(weight));
-        } else if (weight < 20) {
-            System.out.println(so10_19(weight));
-        } else if (weight < 100) {
-            if (weight % 10 == 0) {
-                System.out.println(tronChuc(weight));
+        } else if (number < 10) {
+            System.out.println(underTen(number));
+        } else if (number < 20) {
+            System.out.println(underTwenty(number));
+        } else if (number < 100) {
+            if (number % 10 == 0) {
+                System.out.println(roundNumber(number));
             } else {
-                System.out.println(tronChuc(weight) + " " + so1_9(weight % 10));
+                System.out.println(roundNumber(number) + " " + underTen(number % 10));
             }
         } else {
-            System.out.println(so1_9(weight / 100) + " hundred " + tronChuc(weight % 100) + " " + so1_9(weight % 10));
+            System.out.println(underTen(number / 100) + " hundred " + roundNumber(number % 100) + " " + underTen(number % 10));
         }
     }
 
-    public static String so1_9(int weight) { //như 1 function
-        String weightStr = "";
-        switch (weight) {
+    public static String underTen(int number) { //như 1 function, 1-9
+        String numberStr = "";
+        switch (number) {
             case 1:
-                weightStr = "one";
+                numberStr = "one";
                 break;
             case 2:
-                weightStr = "two";
+                numberStr = "two";
                 break;
             case 3:
-                weightStr = "three";
+                numberStr = "three";
                 break;
             case 4:
-                weightStr = "four";
+                numberStr = "four";
                 break;
             case 5:
-                weightStr = "five";
+                numberStr = "five";
                 break;
             case 6:
-                weightStr = "six";
+                numberStr = "six";
                 break;
             case 7:
-                weightStr = "seven";
+                numberStr = "seven";
                 break;
             case 8:
-                weightStr = "eight";
+                numberStr = "eight";
                 break;
             case 9:
-                weightStr = "nine";
+                numberStr = "nine";
                 break;
         }
-        return weightStr;
+        return numberStr;
     }
 
-    public static String so10_19(int weight) {
-        String weightStr1 = "";
-        switch (weight % 10) {
+    public static String underTwenty(int number) {// 11-19
+        String numberStr1 = "";
+        switch (number % 10) {
             case 0:
-                weightStr1 = "ten";
+                numberStr1 = "ten";
                 break;
             case 1:
-                weightStr1 = "eleven";
+                numberStr1 = "eleven";
                 break;
             case 2:
-                weightStr1 = "twelve";
+                numberStr1 = "twelve";
                 break;
             case 3:
-                weightStr1 = "thirteen";
+                numberStr1 = "thirteen";
                 break;
             case 4:
-                weightStr1 = "fourteen";
+                numberStr1 = "fourteen";
                 break;
             case 5:
-                weightStr1 = "fifteen";
+                numberStr1 = "fifteen";
                 break;
             case 6:
-                weightStr1 = "sixteen";
+                numberStr1 = "sixteen";
                 break;
             case 7:
-                weightStr1 = "seventeen";
+                numberStr1 = "seventeen";
                 break;
             case 8:
-                weightStr1 = "eighteen";
+                numberStr1 = "eighteen";
                 break;
             case 9:
-                weightStr1 = "nineteen";
+                numberStr1 = "nineteen";
                 break;
         }
-        return weightStr1;
+        return numberStr1;
     }
 
-    public static String tronChuc(int weight) {
-        String weightStr2 = "";
-        switch (weight / 10) {
+    public static String roundNumber(int number) {//tròn chục
+        String numberStr2 = "";
+        switch (number / 10) {
             case 2:
-                weightStr2 = "twenty";
+                numberStr2 = "twenty";
                 break;
             case 3:
-                weightStr2 = "thirty";
+                numberStr2 = "thirty";
                 break;
             case 4:
-                weightStr2 = "fourty";
+                numberStr2 = "fourty";
                 break;
             case 5:
-                weightStr2 = "fifty";
+                numberStr2 = "fifty";
                 break;
             case 6:
-                weightStr2 = "sixty";
+                numberStr2 = "sixty";
                 break;
             case 7:
-                weightStr2 = "seventy";
+                numberStr2 = "seventy";
                 break;
             case 8:
-                weightStr2 = "eighty";
+                numberStr2 = "eighty";
                 break;
             case 9:
-                weightStr2 = "ninety";
+                numberStr2 = "ninety";
                 break;
         }
-        return weightStr2;
+        return numberStr2;
     }
 }
