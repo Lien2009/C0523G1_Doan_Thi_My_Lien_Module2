@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 public class Exercise1 {
     public static void main(String[] args) {
+       deleted();
+    }
+    public static void deleted(){
         int array[] = {1, 2, 3, 4, 5, 6, 7, 8};
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập phần tử cần xóa:");
