@@ -3,10 +3,10 @@ package ss6.exercise.exercise2;
 import java.util.Arrays;
 
 public class Point3D extends Point2D {
-    private float z;
+    private float z = 0.0f;
 
     public Point3D() {
-        this.z = 0.0f;
+
     }
 
     public Point3D(float x, float y, float z) {

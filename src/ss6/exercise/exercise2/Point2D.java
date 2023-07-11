@@ -3,10 +3,9 @@ package ss6.exercise.exercise2;
 import java.util.Scanner;
 
 public class Point2D {
-    private float x;
-    private float y;
+    private float x = 0.0f;
+    private float y = 0.0f;
     public Point2D(){
-        this(0.0f,0.0f);
     }
     public Point2D(float x, float y) {
         this.x = x;

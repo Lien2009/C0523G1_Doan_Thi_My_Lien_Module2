@@ -1,4 +1,4 @@
-package ss6.practice;
+package ss7.exercise.exercise1;
 
 public class Circle extends Shape {
     public double radius;
@@ -25,7 +25,7 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    public double getAre() {
+    public double getArea() {
         return radius * 2 * Math.PI;
     }
 
@@ -36,5 +36,10 @@ public class Circle extends Shape {
     @Override
     public String toString() {
         return "A Circle with radius = " + this.radius + ", Which is a subclas of " + super.toString();
+    }
+
+    @Override
+    public void resize(double percent) {
+        setRadius(radius * (1 + percent));
     }
 }

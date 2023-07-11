@@ -1,12 +1,10 @@
 package ss5.exercise.exercise1;
 
 public class Circle {
-    private double radius;
-    private String color;
+    private double radius  = 1.0;
+    private String color = "red";
 
     public Circle() {
-        this.radius = 1.0;
-        this.color = "red";
     }
 
     public Circle(double radius) {

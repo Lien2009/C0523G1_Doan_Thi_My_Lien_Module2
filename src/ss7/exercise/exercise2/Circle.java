@@ -1,4 +1,4 @@
-package ss6.practice;
+package ss7.exercise.exercise2;
 
 public class Circle extends Shape {
     public double radius;
@@ -25,14 +25,9 @@ public class Circle extends Shape {
         this.radius = radius;
     }
 
-    public double getAre() {
-        return radius * 2 * Math.PI;
-    }
-
-    public double getPerimeter() {
+    public double getArea() {
         return Math.pow(radius, 2) * Math.PI;
     }
-
     @Override
     public String toString() {
         return "A Circle with radius = " + this.radius + ", Which is a subclas of " + super.toString();

@@ -3,11 +3,11 @@ package ss6.exercise.exercise3;
 import java.util.Arrays;
 
 public class Point {
-    private float x;
-    private float y;
+    private float x = 0.0f;
+    private float y = 0.0f;
 
     public Point() {
-        this(0.0f, 0.0f);
+
     }
 
     public Point(float x, float y) {

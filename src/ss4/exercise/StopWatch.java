@@ -8,7 +8,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class StopWatch {
-    double startTime, endTime;
+    private double startTime;
+    private double endTime;
+
 
     private StopWatch() {
         System.out.println(java.time.LocalTime.now());
@@ -38,7 +40,6 @@ public class StopWatch {
         StopWatch time = new StopWatch();
         System.out.println("Start at: " + time.getStart());
         Exercise1.deleted();//nhúng bài tập ở class khác sang, phải tạo tên method khác main, class.method
-
         System.out.println("Stop at: " + time.getStop());
         System.out.println("Duration: " + time.getElapsedTime());
     }

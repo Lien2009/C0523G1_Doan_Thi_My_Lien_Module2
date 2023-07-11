@@ -1,12 +1,11 @@
 package ss5.exercise.exercise2;
 
 public class Student {
-    private String name;
-    private String classes;
+    private String name  = "John";
+    private String classes = "C02";
 
     public Student() {
-        this.name = "John";
-        this.classes = "C02";
+
     }
 
     public void setName(String name) {
