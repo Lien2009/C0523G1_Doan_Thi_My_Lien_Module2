@@ -1,10 +1,10 @@
 package ss7.exercise.exercise1;
 
-public class Rectangle extends Shape{
-    private double width;
-    private double length;
+public class Rectangle extends Shape implements Resizeable{
+    private double width = 1.0;
+    private double length = 1.0;
     public  Rectangle(){
-        this(1.0,1.0);
+
     }
     public Rectangle(double width, double length){
         this.width = width;

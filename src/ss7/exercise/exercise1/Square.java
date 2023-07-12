@@ -1,6 +1,6 @@
 package ss7.exercise.exercise1;
 
-public class Square extends Rectangle {
+public class Square extends Rectangle implements Resizeable{
     public Square() {
 
     }

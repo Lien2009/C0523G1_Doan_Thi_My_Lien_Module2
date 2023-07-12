@@ -1,11 +1,11 @@
 package ss7.exercise.exercise2;
 
-public class Shape implements Colorable {
+public abstract class Shape {
 
-    private String color;
-    private boolean filled;
+    private String color = "green";
+    private boolean filled = true;
     public  Shape(){
-        this("green",true);
+
     }
     public Shape(String color, boolean filled){
         this.color = color;
@@ -31,11 +31,5 @@ public class Shape implements Colorable {
         return "A Shape with color of "+this.color+" and " + this.filled;
     }
 
-    @Override
-    public void howToColor() {
-
-    }
-    public double getArea(){
-        return getArea();
-    }
+    public abstract double getArea();
 }

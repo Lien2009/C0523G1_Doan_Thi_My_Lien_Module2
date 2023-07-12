@@ -1,10 +1,10 @@
 package ss7.exercise.exercise1;
 
-public class Shape implements Resizeable {
-    private String color;
-    private boolean filled;
+public class Shape  implements Resizeable{
+    private String color = "green";
+    private boolean filled = true;
     public  Shape(){
-        this("green",true);
+
     }
     public Shape(String color, boolean filled){
         this.color = color;
@@ -29,6 +29,7 @@ public class Shape implements Resizeable {
     public String toString(){
         return "A Shape with color of "+this.color+" and " + this.filled;
     }
+
 
     @Override
     public void resize(double percent) {

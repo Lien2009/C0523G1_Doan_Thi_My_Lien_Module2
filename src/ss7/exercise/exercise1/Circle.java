@@ -1,10 +1,10 @@
 package ss7.exercise.exercise1;
 
-public class Circle extends Shape {
-    public double radius;
+public class Circle extends Shape implements Resizeable {
+    public double radius = 1.0;
 
     public Circle() {
-        this.radius = 1.0;
+
     }
 
     public Circle(double radius) {
