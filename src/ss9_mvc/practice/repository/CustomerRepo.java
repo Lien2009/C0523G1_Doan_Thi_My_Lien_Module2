@@ -22,11 +22,12 @@ public class CustomerRepo implements ICustomerRepo {
 
     @Override
     public ArrayList<Customer> displayAll() {
-        ArrayList<Customer> myCustomer1 = new ArrayList<>(size);
-        for (int i = 0; i < myCustomer.size(); i++) {
-            myCustomer1.add(myCustomer.get(i));
-        }
-        return myCustomer1;
+//        ArrayList<Customer> myCustomer1 = new ArrayList<>(size);
+//        for (int i = 0; i < myCustomer.size(); i++) {
+//            myCustomer1.add(myCustomer.get(i));
+//        }
+//        return myCustomer1;
+        return myCustomer;
     }
 
     @Override
