@@ -38,6 +38,6 @@ public class Square extends Rectangle implements Resizeable{
 
     @Override
     public void resize(double percent) {
-        setSide(getWidth() * (1 + percent));
+        setSide(getWidth() * Math.sqrt(1 + percent));
     }
 }

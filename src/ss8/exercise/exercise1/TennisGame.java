@@ -13,6 +13,7 @@ public class TennisGame {
         if (scoreOfPlay1 == scoreOfPlay2) {
             result = getString(scoreOfPlay1);
         } else {
+
             boolean a = scoreOfPlay1 >= 4 || scoreOfPlay2 >= 4;
             if (a) {
                 int minusResult = scoreOfPlay1 - scoreOfPlay2;
