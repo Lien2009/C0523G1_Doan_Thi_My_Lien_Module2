@@ -5,16 +5,28 @@ import java.util.Arrays;
 public class MyListTest {
     public static void main(String[] args) {
         MyList<String> listTest = new MyList<>();
-        listTest.add(0,"Liên");
-        listTest.add(1,"Hạnh");
-        listTest.add(2,"Hậu");
-        listTest.add(4,"Long");
-
-        System.out.println(listTest.get(0));
-        System.out.println(listTest.get(1));
-        System.out.println(listTest.get(3));
-        listTest.remove(1);
-        System.out.println(listTest.get(1));
-
+        listTest.add("A");
+        listTest.add("B");
+        listTest.add("C");
+        listTest.add("D");
+        listTest.add(1, "E");
+        for (int i = 0; i < listTest.size; i++) {//test add
+            System.out.println(listTest.get(i));
+        }
+        listTest.remove(2);
+        for (int i = 0; i < listTest.size; i++) {//test remove
+            System.out.println(listTest.get(i));
+        }
+        MyList<String> list2 = listTest.clone();//test clone
+        for (int i = 0; i < list2.size; i++) {
+            System.out.println(list2.get(i));
+        }
+        System.out.println(listTest.indexOf("A"));//test indexOf
+        System.out.println(listTest.indexOf("g"));//test indexOf
+        System.out.println(listTest.contains("g"));//test contains
+        listTest.clear();//test clear
+        for (int i = 0; i < listTest.size; i++) {
+            System.out.println(listTest.get(i));
+        }
     }
 }
