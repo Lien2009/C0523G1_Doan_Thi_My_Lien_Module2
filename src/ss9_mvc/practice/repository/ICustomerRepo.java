@@ -12,5 +12,5 @@ public interface ICustomerRepo {
 
     void removeCustomer(int id);
 
-    Customer indexOf(String name);
+    void indexOf(String name);
 }

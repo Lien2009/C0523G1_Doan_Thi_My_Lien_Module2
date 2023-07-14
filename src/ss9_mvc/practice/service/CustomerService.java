@@ -25,7 +25,7 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
-    public Customer indexOf(String name) {
-        return repository.indexOf(name);
+    public void indexOf(String name) {
+        repository.indexOf(name);
     }
 }

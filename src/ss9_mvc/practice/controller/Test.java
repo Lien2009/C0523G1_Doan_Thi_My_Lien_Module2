@@ -22,7 +22,7 @@ public class Test {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter number:");
             int number = scanner.nextInt();
-            switch (number){
+            switch (number) {
                 case 1:
                     ArrayList<Customer> myCustomer = service.displayAll();
                     for (int i = 0; i < myCustomer.size(); i++) {
@@ -38,7 +38,7 @@ public class Test {
                     int age = scanner.nextInt();
                     System.out.println("Enter new Type:");
                     String typeCustomer = scanner.next();
-                    Customer customer = new Customer(id,name,age,typeCustomer);
+                    Customer customer = new Customer(id, name, age, typeCustomer);
                     service.add(customer);
                     break;
                 case 3:
@@ -46,7 +46,14 @@ public class Test {
                     int removeId = scanner.nextInt();
                     service.removeCustomer(removeId);
                     break;
+                case 4:
+                    System.out.println("Enter name:");
+                    String searchname = scanner.next();
+                    service.indexOf(searchname);
+                    break;
+                case 5:
+                    System.exit(0);
             }
-        } while (number<5);
+        } while (true);
     }
 }
