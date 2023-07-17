@@ -6,11 +6,12 @@ import ss9_mvc.practice.model.Customer;
 import java.util.ArrayList;
 
 public interface ICustomerService {
-    ArrayList<Customer> displayAll();
+    void displayAll();
 
-    void add(Customer e);
+    void add();
 
-    void removeCustomer(int id);
+    void removeCustomer();
 
-    void indexOf(String name);
+    void findByName();
+    void sortByCustomerType();
 }

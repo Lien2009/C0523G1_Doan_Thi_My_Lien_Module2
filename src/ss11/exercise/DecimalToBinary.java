@@ -1,4 +1,4 @@
-package ss11.exercise.exercise2;
+package ss11.exercise;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -6,11 +6,11 @@ import java.util.Stack;
 public class DecimalToBinary {
     public static void main(String[] args) {
         Stack<Integer> mystack = new Stack<>();
-        String result = "";
+        String ketQua = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập số hệ thập phân:");
-        int number = Integer.parseInt(scanner.nextLine());
-        int phanNguyen = number;
+        int so = Integer.parseInt(scanner.nextLine());
+        int phanNguyen = so;
         int phanDu = 0;
         while (phanNguyen>0){
             phanDu = phanNguyen%2;
@@ -18,8 +18,8 @@ public class DecimalToBinary {
             mystack.push(phanDu);
         }
         for (int i = mystack.size(); i > 0 ; i--) {
-            result += mystack.pop();
+            ketQua += mystack.pop();
         }
-        System.out.println(result);
+        System.out.println(ketQua);
     }
 }

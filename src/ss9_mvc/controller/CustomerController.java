@@ -7,7 +7,7 @@ import ss9_mvc.service.StudentService;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Test {
+public class CustomerController {
     private static IStudentService service = new StudentService();
     private static int number = 0;
     public static void main(String[] args) {

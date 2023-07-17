@@ -1,6 +1,6 @@
 package ss9_mvc.practice.model;
 
-public class Customer {
+public class Customer implements Comparable<Customer> {
     private int id;
     private String name;
     private int age;
@@ -56,5 +56,16 @@ public class Customer {
                 ", age=" + age +
                 ", typeCustomer='" + typeCustomer + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Customer o) {
+        if (this.getAge()>o.getAge()){
+            return 1;
+        }else if (this.getAge()<o.getAge()){
+            return -1;
+        }else {
+            return this.getName().compareTo(o.getName());
+        }
     }
 }

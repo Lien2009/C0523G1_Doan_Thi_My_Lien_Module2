@@ -1,4 +1,4 @@
-package ss11.exercise.exercise2;
+package ss11.exercise;
 
 import java.util.LinkedList;
 import java.util.Queue;

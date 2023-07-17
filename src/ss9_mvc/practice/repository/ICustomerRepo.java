@@ -12,5 +12,6 @@ public interface ICustomerRepo {
 
     void removeCustomer(int id);
 
-    void indexOf(String name);
+    void findByName(String name);
+    void sortByCustomerType();
 }
