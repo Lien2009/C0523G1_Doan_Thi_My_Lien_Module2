@@ -48,9 +48,8 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void sortByCustomerType() {
-        ArrayList<Customer> myCustomer = repository.displayAll();
-        for (int i = 0; i < myCustomer.size(); i++) {
-            System.out.println(myCustomer.get(i));
-        }
+//        ICustomerRepo myCustomer;
+//        myCustomer.sortByCustomerType();
+//        myCustomer.displayAll();
     }
 }
