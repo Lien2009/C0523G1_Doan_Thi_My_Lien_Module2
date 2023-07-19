@@ -2,6 +2,8 @@ package ss12.exercise.exercise1_mvc.repository;
 
 import ss12.exercise.exercise1_mvc.model.Product;
 
+import java.util.List;
+
 public interface IProductRepository {
     void add(Product product);
     void set(int id, Product product);

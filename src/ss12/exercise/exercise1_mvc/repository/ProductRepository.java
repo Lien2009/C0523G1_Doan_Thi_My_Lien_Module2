@@ -58,19 +58,20 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public void sortIncrease() {
-        SortAscendingByPrice ascending = new SortAscendingByPrice();
-        Collections.sort(productList, ascending);
-        for (Product product : productList) {
+        List<Product> productList1 = new ArrayList<>(productList);
+        Collections.sort(productList1, new SortAscendingByPrice());
+        for (Product product : productList1) {
             System.out.println(product);
         }
     }
 
-    @Override
-    public void sortDecrease() {
-        SortDescendingByPrice descending = new SortDescendingByPrice();
-        Collections.sort(productList, descending);
-        for (Product product : productList) {
-            System.out.println(product);
+        @Override
+        public void sortDecrease () {
+            List<Product> productList2 = new ArrayList<>(productList);
+            Collections.sort(productList2, new SortDescendingByPrice());
+            for (Product product : productList2) {
+                System.out.println(product);
+            }
         }
     }
-}
+

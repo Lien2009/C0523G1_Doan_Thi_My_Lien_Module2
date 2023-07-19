@@ -1,6 +1,6 @@
 package ss12.exercise.exercise1_mvc.service;
 
-import ss12.exercise.exercise1.Product;
+import ss12.exercise.exercise1_mvc.model.Product;
 
 public interface IProductService {
     void add();

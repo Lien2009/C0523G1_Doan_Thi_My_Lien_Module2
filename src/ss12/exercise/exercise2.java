@@ -1,8 +1,9 @@
-package ss12.exercise.exercise1_mvc;
+package ss12.exercise;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class exercise2 {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class exercise2 {
         String input = scanner.nextLine();
         input = input.toLowerCase();
         String[] inputArr = input.split(" ");
-        Map<String, Integer> myMap = new HashMap<>();
+        Map<String, Integer> myMap = new TreeMap<>();
         for (int i = 0; i < inputArr.length; i++) {
             if (!myMap.containsKey(inputArr[i])) {
                 myMap.put(inputArr[i], 1);

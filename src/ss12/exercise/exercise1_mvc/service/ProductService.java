@@ -63,6 +63,7 @@ public class ProductService implements IProductService {
         productRepository.sortIncrease();
     }
 
+
     @Override
     public void sortDecrease() {
         productRepository.sortDecrease();
