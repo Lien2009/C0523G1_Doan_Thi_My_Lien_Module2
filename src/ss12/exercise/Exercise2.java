@@ -1,11 +1,10 @@
 package ss12.exercise;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class exercise2 {
+public class Exercise2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();

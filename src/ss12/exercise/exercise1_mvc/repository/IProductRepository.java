@@ -8,8 +8,8 @@ public interface IProductRepository {
     void add(Product product);
     void set(int id, Product product);
     void remove(int id);
-    void display();
-    void search(String name);
-    void sortIncrease();
-    void sortDecrease();
+    List<Product> getAll();
+    List<Product> search(String name);
+    List<Product> sortIncrease();
+    List<Product> sortDecrease();
 }

@@ -41,37 +41,33 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public void display() {
-        for (Product product : productList) {
-            System.out.println(product);
-        }
+    public List<Product> getAll() {
+        return productList;
     }
 
     @Override
-    public void search(String name) {
+    public List<Product> search(String name) {
+        List<Product> productList0 = new ArrayList<>();
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getName().equals(name)) {
-                System.out.println(productList.get(i));
+                productList0.add(productList.get(i));
             }
         }
+        return productList0;
     }
 
     @Override
-    public void sortIncrease() {
+    public List<Product> sortIncrease() {
         List<Product> productList1 = new ArrayList<>(productList);
         Collections.sort(productList1, new SortAscendingByPrice());
-        for (Product product : productList1) {
-            System.out.println(product);
-        }
+        return productList1;
     }
 
-        @Override
-        public void sortDecrease () {
-            List<Product> productList2 = new ArrayList<>(productList);
-            Collections.sort(productList2, new SortDescendingByPrice());
-            for (Product product : productList2) {
-                System.out.println(product);
-            }
-        }
+    @Override
+    public List<Product> sortDecrease() {
+        List<Product> productList2 = new ArrayList<>(productList);
+        Collections.sort(productList2, new SortDescendingByPrice());
+        return productList2;
     }
+}
 

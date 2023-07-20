@@ -2,10 +2,9 @@ package ss13.exercise;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
-public class exercise2 {
+public class Exercise2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);//bước1
         List<Integer> myList = new ArrayList<>();

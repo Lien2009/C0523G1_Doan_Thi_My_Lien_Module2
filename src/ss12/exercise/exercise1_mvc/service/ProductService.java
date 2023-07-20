@@ -47,25 +47,33 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void display() {
-        productRepository.display();
+    public void getAll() {
+        for (Product product : productRepository.getAll()) {
+            System.out.println(product);
+        }
     }
 
     @Override
     public void search() {
         System.out.println("Nhập tên sp tìm kiếm:");
         String name = scanner.nextLine();
-        productRepository.search(name);
+        for (Product product : productRepository.search(name)) {
+            System.out.println(product);
+        }
     }
 
     @Override
     public void sortIncrease() {
-        productRepository.sortIncrease();
+        for (Product product : productRepository.sortIncrease()) {
+            System.out.println(product);
+        }
     }
 
 
     @Override
     public void sortDecrease() {
-        productRepository.sortDecrease();
+        for (Product product : productRepository.sortDecrease()) {
+            System.out.println(product);
+        }
     }
 }

@@ -1,6 +1,6 @@
 package ss13.practice;
 
-public class practice1 {
+public class Practice1 {
     static int[] list = {2,4,7,10,11,45,50,59,60,66,69,70,79};
     static int binarySearch(int[] list, int key){
         int low = 0;

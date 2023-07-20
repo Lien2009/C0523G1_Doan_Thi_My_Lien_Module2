@@ -32,7 +32,7 @@ public class ProductController {
                     productService.remove();
                     break;
                 case 4:
-                    productService.display();
+                    productService.getAll();
                     break;
                 case 5:
                     productService.search();
