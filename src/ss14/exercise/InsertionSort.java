@@ -13,6 +13,7 @@ public class InsertionSort {
             }
             System.out.println("Chèn " + temp + " vào vị trí " + (j + 1));
             list[j + 1] = temp;//hết số lớn hơn temp, sẽ có chỗ trống tại j+1 vì đã dịch sang phải hết
+            
         }
     }
 
@@ -21,6 +22,7 @@ public class InsertionSort {
         insertSort(mylist);
         for (int element : mylist) {
             System.out.println(element);
+
         }
     }
 }

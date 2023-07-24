@@ -69,5 +69,10 @@ public class ProductRepository implements IProductRepository {
         Collections.sort(productList2, new SortDescendingByPrice());
         return productList2;
     }
+
+    public static void main(String[] args) {
+        int index = productList.indexOf(new Product(2, "Cam"));//thử ss theo id và tên
+        System.out.println(index);
+    }
 }
 

@@ -1,5 +1,7 @@
 package ss12.exercise.exercise1_mvc.model;
 
+import java.util.Objects;
+
 public class Product {
     private int id;
     private String name;
@@ -7,6 +9,13 @@ public class Product {
     private int quantity;
 
     public Product() {
+    }
+    public Product(int id) {
+        this.id = id;
+    }
+    public Product(int id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public Product(int id, String name, int price, int quantity) {
@@ -56,5 +65,13 @@ public class Product {
                 ", price=" + price +
                 ", quantity=" + quantity +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return id == product.id && Objects.equals(name, product.name);
     }
 }
