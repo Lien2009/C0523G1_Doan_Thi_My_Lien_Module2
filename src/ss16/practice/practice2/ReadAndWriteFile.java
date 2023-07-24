@@ -14,10 +14,11 @@ public class ReadAndWriteFile {
             }
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line = "";
-            while ((line = br.readLine()) != null){
-                System.out.println(line);
+            while ((line = br.readLine()) != null){//đọc cho đến khi nào khác null
+//                System.out.println(line);
                 numbers.add(Integer.parseInt(line));
             }
+            System.out.println(numbers);
             br.close();
         } catch (Exception e){
             System.out.println("Lỗi");
@@ -28,7 +29,7 @@ public class ReadAndWriteFile {
         try{
             FileWriter writer = new FileWriter(filePath, true);
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
-            bufferedWriter.write("Gía trị lớn nhất laf: "+max);
+            bufferedWriter.write("Gía trị lớn nhất là: "+max);
             bufferedWriter.close();
 
         }catch (IOException e){
