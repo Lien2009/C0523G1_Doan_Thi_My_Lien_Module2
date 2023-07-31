@@ -1,5 +1,7 @@
 package furamaResort.controller;
 
+import furamaResort.model.Facility;
+
 import java.util.Scanner;
 
 public class FuramaController {
@@ -22,12 +24,7 @@ public class FuramaController {
                     CustomerController.showCustomerMenu();
                     break;
                 case 3:
-                    System.out.println("---FACILITY---");
-                    System.out.println("1. Display list facility");
-                    System.out.println("2. Add new facility");
-                    System.out.println("3. Edit facility");
-                    System.out.println("4. Delete facility");
-                    System.out.println("5. Return main menu");
+                    FacilityController.showFacilityMenu();
                     break;
                 case 4:
                     System.out.println("---BOOKING---");

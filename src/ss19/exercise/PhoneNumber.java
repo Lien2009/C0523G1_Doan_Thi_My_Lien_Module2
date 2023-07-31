@@ -5,7 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class PhoneNumber {
-    public static final String REGEX_PHONE = "^[(](84)[)]-[(]0\\d{9}[)]$";
+    public static final String REGEX_PHONE = "^\\((84)\\)-\\(0\\d{9}\\)$";
 
     public static void main(String[] args) {
         Pattern pattern = Pattern.compile(REGEX_PHONE);

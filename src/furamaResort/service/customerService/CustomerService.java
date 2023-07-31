@@ -16,9 +16,9 @@ public class CustomerService implements ICustomerService {
     public static String[] enterInfo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name:");
-        String name = scanner.nextLine();
+        String name = EmployeeRegex.checkName();
         System.out.println("Enter date of birth:");
-        String dateOfBirth = scanner.nextLine();
+        String dateOfBirth = EmployeeRegex.checkDate();
         System.out.println("Enter gender:");
         String gender = scanner.nextLine();
         System.out.println("Enter Identify number:");
@@ -28,7 +28,7 @@ public class CustomerService implements ICustomerService {
         System.out.println("Enter email:");
         String email = scanner.nextLine();
         System.out.println("Enter type:");
-        String type = scanner.nextLine();
+        String type = CustomerRegex.type();
         System.out.println("Enter address:");
         String address = scanner.nextLine();
         String[] inforList = {name, dateOfBirth, gender, identify, phoneNumber, email, type, address};

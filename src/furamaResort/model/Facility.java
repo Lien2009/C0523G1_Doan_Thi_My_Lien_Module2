@@ -1,17 +1,23 @@
 package furamaResort.model;
 
-public abstract class Facility {
+import java.util.Objects;
+
+public class Facility {
     private String id;
     private String name;
-    private Double area;
-    private Double cost;
+    private double area;
+    private double cost;
     private int capacity;
     private String rentType;
 
     public Facility() {
     }
 
-    public Facility(String id, String name, Double area, Double cost, int capacity, String rentType) {
+    public Facility(String id) {
+        this.id = id;
+    }
+
+    public Facility(String id, String name, double area, double cost, int capacity, String rentType) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -36,19 +42,19 @@ public abstract class Facility {
         this.name = name;
     }
 
-    public Double getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(Double area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
-    public Double getCost() {
+    public double getCost() {
         return cost;
     }
 
-    public void setCost(Double cost) {
+    public void setCost(double cost) {
         this.cost = cost;
     }
 
@@ -80,5 +86,18 @@ public abstract class Facility {
                 ", cost=" + cost +
                 ", capacity=" + capacity +
                 ", rentType='" + rentType + '\'';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Facility facility = (Facility) o;
+        return Objects.equals(id, facility.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }

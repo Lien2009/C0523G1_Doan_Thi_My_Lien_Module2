@@ -14,9 +14,9 @@ public class EmployeeService implements IEmployeeService {
     public static String[] enterInfo() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name:");
-        String name = scanner.nextLine();
+        String name = EmployeeRegex.checkName();
         System.out.println("Enter date of birth:");
-        String dateOfBirth = scanner.nextLine();
+        String dateOfBirth = EmployeeRegex.checkDate();
         System.out.println("Enter gender:");
         String gender = scanner.nextLine();
         System.out.println("Enter Identify number:");
@@ -26,9 +26,9 @@ public class EmployeeService implements IEmployeeService {
         System.out.println("Enter email:");
         String email = scanner.nextLine();
         System.out.println("Enter level:");
-        String level = scanner.nextLine();
+        String level = EmployeeRegex.level();
         System.out.println("Enter position:");
-        String position = scanner.nextLine();
+        String position = EmployeeRegex.position();
         System.out.println("Enter salary:");
         Double salary;
         do {
