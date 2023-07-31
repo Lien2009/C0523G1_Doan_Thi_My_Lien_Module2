@@ -25,15 +25,9 @@ public class FacilityService implements IFacilityService {
         System.out.println("1.Add New Villa");
         System.out.println("2.Add New House");
         System.out.println("3.Add New Room");
-        System.out.println("4.Back to menu");
-        System.out.println("Enter number:");
-        int choose = Integer.parseInt(scanner.nextLine());
-        switch (choose){
-            case 1:
-
-        }
-
-
+        System.out.println("4.Back to menu");//chưa hiểu đoạn này?
+//        System.out.println("Enter number:");
+//        int choose = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter ID:");
         String id = FacilityRegex.checkId();
         if(repository.findKey(id)){

@@ -10,19 +10,27 @@ import java.util.Scanner;
 
 public class EmployeeService implements IEmployeeService {
     IEmployeeRepository repository = new EmployeeRepository();
-
+    static Scanner scanner = new Scanner(System.in);
     public static String[] enterInfo() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter name:");
-        String name = EmployeeRegex.checkName();
+        String name;
+        do {
+            name = scanner.nextLine();
+        }while (!EmployeeRegex.checkName(name));
         System.out.println("Enter date of birth:");
         String dateOfBirth = EmployeeRegex.checkDate();
         System.out.println("Enter gender:");
         String gender = scanner.nextLine();
         System.out.println("Enter Identify number:");
-        String identify = EmployeeRegex.checkIdentify();
+        String identify;
+        do {
+            identify = scanner.nextLine();
+        }while (!EmployeeRegex.checkId(identify));
         System.out.println("Enter phone number:");
-        String phoneNumber = EmployeeRegex.checkPhone();
+        String phoneNumber;
+        do {
+            phoneNumber = scanner.nextLine();
+        }while (!EmployeeRegex.checkPhone(phoneNumber));
         System.out.println("Enter email:");
         String email = scanner.nextLine();
         System.out.println("Enter level:");
@@ -52,7 +60,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void add() {
         System.out.println("Enter ID:");
-        String id = EmployeeRegex.checkId();
+        String id;
+        do {
+            id = scanner.nextLine();
+        }while (!EmployeeRegex.checkId(id));
         if(repository.findId(id) != -1){//check đã tồn tại
             System.out.println("Don't add an already existing ID");
             return;
@@ -65,7 +76,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void edit() {
         System.out.println("Enter ID you want to edit:");
-        String chooseId = EmployeeRegex.checkId();//check đúng format
+        String chooseId;
+        do {
+            chooseId = scanner.nextLine();
+        }while (!EmployeeRegex.checkId(chooseId));
         if(repository.findId(chooseId) == -1){//check ko tồn tại
             System.out.println("Not found!");
             return;
@@ -79,7 +93,10 @@ public class EmployeeService implements IEmployeeService {
     @Override
     public void delete() {
         System.out.println("Enter ID you want to delete:");
-        String chooseId = EmployeeRegex.checkId();
+        String chooseId;
+        do {
+            chooseId = scanner.nextLine();
+        }while (!EmployeeRegex.checkId(chooseId));
         if(repository.findId(chooseId) == -1){//check ko tồn tại
             System.out.println("Not found!");
             return;

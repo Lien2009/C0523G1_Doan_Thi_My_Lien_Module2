@@ -17,7 +17,12 @@ public class FacilityController {
             System.out.println("4. Delete facility");
             System.out.println("5. Return main menu");
             System.out.println("Enter your choose:");
-            int choose = Integer.parseInt(scanner.nextLine());
+            int choose = 0;
+            try {
+                choose = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                System.out.println("Enter number format");
+            }
             switch (choose) {
                 case 1:
                     service.display();

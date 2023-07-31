@@ -14,56 +14,36 @@ public class EmployeeRegex {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static String checkId() {
-        boolean checkId;
-        String id;
-        do {
-            id = scanner.nextLine();
-            checkId = id.matches(REGEX_ID);
-            if (!checkId) {
-                System.out.println("Enter Id again!");
-            }
-        } while (!checkId);
-        return id;
+    public static boolean checkId(String id) {
+        boolean checkId = id.matches(REGEX_ID);
+        if (!checkId) {
+            System.out.println("Enter Id again!");
+        }
+        return checkId;
     }
 
-    public static String checkIdentify() {
-        boolean checkIdentify;
-        String identify;
-        do {
-            identify = scanner.nextLine();
-            checkIdentify = identify.matches(REGEX_IDENTIFY);
-            if (!checkIdentify) {
-                System.out.println("Enter Identify number again!");
-            }
-        } while (!checkIdentify);
-        return identify;
+    public static boolean checkIdentify(String identify) {
+        boolean checkIdentify = identify.matches(REGEX_IDENTIFY);
+        if (!checkIdentify) {
+            System.out.println("Enter Identify number again!");
+        }
+        return checkIdentify;
     }
 
-    public static String checkPhone() {
-        boolean checkPhone;
-        String phoneNumber;
-        do {
-            phoneNumber = scanner.nextLine();
-            checkPhone = phoneNumber.matches(REGEX_PHONE);
-            if (!checkPhone) {
-                System.out.println("Enter Phone number again!");
-            }
-        } while (!checkPhone);
-        return phoneNumber;
+    public static boolean checkPhone(String phoneNumber) {
+        boolean checkPhone = phoneNumber.matches(REGEX_PHONE);
+        if (!checkPhone) {
+            System.out.println("Enter Phone number again!");
+        }
+        return checkPhone;
     }
 
-    public static String checkName() {
-        boolean checkName;
-        String name;
-        do {
-            name = scanner.nextLine();
-            checkName = name.matches(REGEX_NAME);
-            if (!checkName) {
-                System.out.println("Enter name again!");
-            }
-        } while (!checkName);
-        return name;
+    public static boolean checkName(String name) {
+        boolean checkName = name.matches(REGEX_NAME);
+        if (!checkName) {
+            System.out.println("Enter name again!");
+        }
+        return checkName;
     }
 
     public static String checkDate() {

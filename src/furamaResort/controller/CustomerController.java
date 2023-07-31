@@ -18,7 +18,12 @@ public class CustomerController {
             System.out.println("5. Search by name customer");
             System.out.println("6. Return main menu");
             System.out.println("Enter your choose:");
-            int choose = Integer.parseInt(scanner.nextLine());
+            int choose = 0;
+            try {
+                choose = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println("Enter number format!");
+            }
             switch (choose) {
                 case 1:
                     service.display();

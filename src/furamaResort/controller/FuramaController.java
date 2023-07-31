@@ -14,8 +14,13 @@ public class FuramaController {
             System.out.println("4. Booking Management");
             System.out.println("5. Promotion Management");
             System.out.println("6. Exit");
+            int choose = 0;
             System.out.println("Enter your choose:");
-            int choose = Integer.parseInt(scanner.nextLine());
+            try {
+                choose = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                System.out.println("Enter number format!");
+            }
             switch (choose) {
                 case 1:
                     EmployeeController.showEmployeeMenu();
@@ -27,13 +32,7 @@ public class FuramaController {
                     FacilityController.showFacilityMenu();
                     break;
                 case 4:
-                    System.out.println("---BOOKING---");
-                    System.out.println("1. Add new booking");
-                    System.out.println("2. Display list booking");
-                    System.out.println("3. Create new contracts");
-                    System.out.println("4. Display list contracts");
-                    System.out.println("5. Edit contracts");
-                    System.out.println("5. Return main menu");
+                    BookingController.showBookingMenu();
                     break;
                 case 5:
                     System.out.println("---PROMOTION---");
