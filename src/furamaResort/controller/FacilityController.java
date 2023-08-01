@@ -13,7 +13,7 @@ public class FacilityController {
             System.out.println("---FACILITY---");
             System.out.println("1. Display list facility");
             System.out.println("2. Add new facility");
-            System.out.println("3. Edit facility");
+            System.out.println("3. Display list facility maintenance");
             System.out.println("4. Delete facility");
             System.out.println("5. Return main menu");
             System.out.println("Enter your choose:");
