@@ -1,7 +1,7 @@
 package furamaResort.controller;
 
-import furamaResort.service.customerService.CustomerService;
-import furamaResort.service.customerService.ICustomerService;
+import furamaResort.service.customer.CustomerService;
+import furamaResort.service.customer.ICustomerService;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class CustomerController {
             }
             switch (choose) {
                 case 1:
-                    service.display();
+                    service.getAll();
                     break;
                 case 2:
                     service.add();

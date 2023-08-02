@@ -1,7 +1,7 @@
 package furamaResort.controller;
 
-import furamaResort.service.employeeService.EmployeeService;
-import furamaResort.service.employeeService.IEmployeeService;
+import furamaResort.service.employee.EmployeeService;
+import furamaResort.service.employee.IEmployeeService;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class EmployeeController {
             }
             switch (choose) {
                 case 1:
-                    service.display();
+                    service.getAll();
                     break;
                 case 2:
                     service.add();

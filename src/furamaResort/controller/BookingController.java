@@ -1,9 +1,9 @@
 package furamaResort.controller;
 
-import furamaResort.service.bookingService.BookingService;
-import furamaResort.service.bookingService.IBookingService;
-import furamaResort.service.contractService.ContractService;
-import furamaResort.service.contractService.IContractService;
+import furamaResort.service.booking.BookingService;
+import furamaResort.service.booking.IBookingService;
+import furamaResort.service.contract.ContractService;
+import furamaResort.service.contract.IContractService;
 
 import java.util.Scanner;
 
@@ -32,7 +32,7 @@ public class BookingController {
                     service.add();
                     break;
                 case 2:
-                    service.display();
+                    service.getAll();
                     break;
                 case 3:
                     break;

@@ -1,7 +1,7 @@
 package furamaResort.controller;
 
-import furamaResort.service.facilityService.FacilityService;
-import furamaResort.service.facilityService.IFacilityService;
+import furamaResort.service.facility.FacilityService;
+import furamaResort.service.facility.IFacilityService;
 
 import java.util.Scanner;
 
@@ -25,13 +25,13 @@ public class FacilityController {
             }
             switch (choose) {
                 case 1:
-                    service.display();
+                    service.getAll();
                     break;
                 case 2:
                     service.add();
                     break;
                 case 3:
-                    service.displayMaintenance();
+                    service.getAllMaintenance();
                     break;
                 case 4:
                     service.delete();
