@@ -40,7 +40,7 @@ public class FacilityService implements IFacilityService {
         }
         System.out.println("Enter ID:");
         String id = FacilityRegex.checkId();
-        if (repository.findKey(id)) {
+        if (repository.checkId(id)) {
             System.out.println("Don't add an already existing ID");
             return;
         }
@@ -98,7 +98,7 @@ public class FacilityService implements IFacilityService {
     public void delete() {
         System.out.println("Enter ID:");
         String id = FacilityRegex.checkId();
-        if (repository.findKey(id) == false) {
+        if (repository.checkId(id) == false) {
             System.out.println("Not found");
             return;
         }

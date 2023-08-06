@@ -39,6 +39,8 @@ public class BookingService implements IBookingService {
     @Override
     public void getAll() {
         List<Booking> bookingSet = repository.getAll();
-        System.out.println(bookingSet);
+        for(Booking booking:bookingSet){
+            System.out.println(booking);
+        }
     }
 }

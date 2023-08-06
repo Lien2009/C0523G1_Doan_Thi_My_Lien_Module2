@@ -14,7 +14,7 @@ public class FacilityRepository implements IFacilityRepository {
     public static final String ROOM_FILE = "C:\\Users\\mylie\\Desktop\\C0523G1_Doan_Thi_My_Lien_Module2\\C0523G1_Doan_Thi_My_Lien_Module2\\src\\furamaResort\\data\\room.csv";
 
     @Override
-    public boolean findKey(String id) {
+    public boolean checkId(String id) {
         for (Facility facility : getAll().keySet()) {
             if (facility.getId().equals(id)) {
                 return true;//có thì true

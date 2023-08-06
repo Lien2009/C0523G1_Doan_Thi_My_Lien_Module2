@@ -1,6 +1,7 @@
 package furamaResort.model;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
 public class Booking {
     private String bookingId;
@@ -10,6 +11,10 @@ public class Booking {
     private LocalDate end;
 
     public Booking() {
+    }
+
+    public Booking(String bookingId) {
+        this.bookingId = bookingId;
     }
 
     public Booking(String bookingId, String customerId, String facilityId, LocalDate start, LocalDate end) {
@@ -62,12 +67,23 @@ public class Booking {
 
     @Override
     public String toString() {
-        return "Booking{" +
-                "bookingId='" + bookingId + '\'' +
+        return "bookingId='" + bookingId + '\'' +
                 ", customerId='" + customerId + '\'' +
                 ", facilityId='" + facilityId + '\'' +
                 ", start=" + start +
-                ", end=" + end +
-                '}';
+                ", end=" + end;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Booking booking = (Booking) o;
+        return Objects.equals(bookingId, booking.bookingId);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(bookingId);
     }
 }

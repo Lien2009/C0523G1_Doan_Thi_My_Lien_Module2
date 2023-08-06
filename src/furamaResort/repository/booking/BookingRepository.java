@@ -10,13 +10,10 @@ public class BookingRepository implements IBookingRepository {
     static List<Booking> bookings = new ArrayList<>();
 
     static {
-        LocalDate start1 = LocalDate.of(2023, 7, 20);
-        LocalDate end1 = LocalDate.of(2023, 7, 21);
-//        LocalDate start2 = LocalDate.parse("2023-07-10");
-//        LocalDate end2 = LocalDate.parse("2023-07-20");
-
-        bookings.add(new Booking("BK1", "KH-0123", "SVVL-0123", start1, end1));
-        bookings.add(new Booking("BK2", "KH-0124", "SVVL-0124", LocalDate.parse("2023-07-20"), LocalDate.parse("2023-07-30")));
+        bookings.add(new Booking("BK1", "KH-0123", "SVVL-0123",
+                LocalDate.parse("2023-07-20"), LocalDate.parse("2023-07-21")));
+        bookings.add(new Booking("BK2", "KH-0124", "SVVL-0124",
+                LocalDate.parse("2023-07-20"), LocalDate.parse("2023-07-30")));
     }
 
     @Override
@@ -27,5 +24,10 @@ public class BookingRepository implements IBookingRepository {
     @Override
     public List<Booking> getAll() {
         return bookings;
+    }
+
+    @Override
+    public void delete(String id) {
+        bookings.remove(new Booking(id));
     }
 }

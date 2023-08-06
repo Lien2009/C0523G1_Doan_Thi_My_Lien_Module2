@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface IFacilityRepository {
-    boolean findKey(String id);
+    boolean checkId(String id);
     Map<Facility, Integer> getAll();
     Map<Facility, Integer> getAllVilla();
     Map<Facility, Integer> getAllHouse();

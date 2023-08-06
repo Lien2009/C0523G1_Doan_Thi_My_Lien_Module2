@@ -24,7 +24,7 @@ public class BookingController {
             int number = 0;
             try {
                 number = Integer.parseInt(scanner.nextLine());
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 System.out.println("Enter number format!");
             }
             switch (number) {
@@ -35,10 +35,13 @@ public class BookingController {
                     service.getAll();
                     break;
                 case 3:
+                    service1.create();
                     break;
                 case 4:
+                    service1.displayContract();
                     break;
                 case 5:
+                    service1.edit();
                     break;
                 case 6:
                     FuramaController.displayMainMenu();
@@ -46,6 +49,4 @@ public class BookingController {
             }
         } while (true);
     }
-
-
 }
